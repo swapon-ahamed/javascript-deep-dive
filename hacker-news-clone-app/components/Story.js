@@ -15,8 +15,8 @@ export default function Story(story) {
           ${story.comments_count} comments
         </a>
         |
-        <span class="favorite">
-          Add To Favorites
+        <span class="favorite" data-story='${JSON.stringify(story)}'>
+          ${story.isFavorite ? 'Remove Favorite': 'Add To Favorites'}
         </span>
       </div>
     </div>
